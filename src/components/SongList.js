@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class SongList extends Component {
-  render () {
-    console.log(this.props);
-    return <div>SongList</div>;
+  renderList () {
+    return this.props.songs.map((song) => {
+      return (
+        <div className='item' key={song.title}>
+
+        </div>
+      );
+    });
   }
 }
 
